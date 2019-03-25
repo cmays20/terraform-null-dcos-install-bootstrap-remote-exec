@@ -257,6 +257,7 @@ resource "null_resource" "bootstrap" {
   connection {
     host = "${var.bootstrap_ip}"
     user = "${var.os_user}"
+    agent= true
   }
 
   provisioner "file" {
